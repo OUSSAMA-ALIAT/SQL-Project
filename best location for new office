@@ -1,0 +1,80 @@
+
+
+
+
+Select a New City Using BigQuery
+
+
+
+Overview and Import Data Into BigQuery
+
+● BigQuery is a data warehouse on Google Cloud that can be used to query  large
+datasets, aggregate results, and perform complex operations.
+
+
+
+Data source Link : 
+
+Case study : 
+
+A company is Looking for new office and the task is to analyze data from   city_data.cities database  to provide insights to the management about the best location for their new office 
+
+Tasks :
+
+
+***************Task 1:***************
+
+Identify Cities that Match the following requirments:
+
+-City name 
+-Average Temperature  between 40  to 65
+-Include Average cummute time 
+-Happiness ranking 
+
+SQL statement :
+
+SELECT
+city_name,
+avg_temp,
+avg_commute,
+happiness_ranking
+FROM
+city_data.cities
+WHERE
+avg_temp BETWEEN 45 AND 65
+
+**************Task 2********************
+Narrow Down Cities Based on Commute Times
+
+
+
+SELECT
+city_name,
+avg_temp,
+avg_commute,
+happiness_ranking
+FROM
+city_data.cities
+WHERE
+avg_temp BETWEEN 45 AND 65
+AND avg_commute < 60
+
+***************Task 3**************************
+Narrow Down Results Using Happiness Rankings
+
+SELECT
+city_name,
+avg_temp,
+avg_commute,
+happiness_ranking
+FROM
+city_data.cities
+WHERE
+avg_temp BETWEEN 45 AND 65
+AND avg_commute < 60
+AND happiness_ranking <= 15
+
+
+
+
+
